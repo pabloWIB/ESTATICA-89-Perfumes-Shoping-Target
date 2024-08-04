@@ -5,11 +5,9 @@
 // HEADER
 
 header{
-    transition: 10s;
     display: flex;
     width: 100%;
     flex-flow: column wrap;
-    background: url('../IMG/photo.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     gap: 5rem;
@@ -171,6 +169,7 @@ header{
     }
 }
 .headerAnimation{
+    background: url('../IMG/photo.jpg');
     >:nth-child(1){
         transform: translateY(0%);
         transition: 1s;
@@ -865,15 +864,7 @@ main{
                             }
                         }
                         >:nth-child(2){
-                            display: flex;
-                            flex-flow: row wrap;
-                            align-items: center;
-                            gap: 1rem;
-                            justify-content: center;
-                            transform: translateX(0%);
-                            >div{
-                                width: min(100px, 95%);
-                            }
+                            display: none;
                         }
                         >:nth-child(3){
                             display: flex;
@@ -901,6 +892,40 @@ main{
                             }
                         }
                     }
+                }
+            }
+        }
+        .whatsAppCallActions{
+            display: flex;
+            place-content: center;
+            align-items: center;
+            a{
+                all: unset;
+                cursor: pointer;
+                display: flex;
+                flex-flow: row nowrap;
+                align-items: center;
+                background: #40C351;
+                border-radius: 20px;
+                padding: .25rem .5rem;
+                gap: .5rem;
+                box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.5);
+                animation: scaleUpDown 5s linear infinite;
+                &:hover{
+                    transform: scale(1.05);
+                    transition: .5s;
+                }
+                >:nth-child(1){
+                    width: min(35px, 100%);
+                    img{
+                        width: 100%;
+                    }
+                }
+                p{
+                    all: unset;
+                    color: white;
+                    font-weight: 600;
+                    font-size: 20px;
                 }
             }
         }
@@ -1119,15 +1144,7 @@ main{
                             }
                         }
                         >:nth-child(2){
-                            display: flex;
-                            flex-flow: row wrap;
-                            align-items: center;
-                            gap: 1rem;
-                            justify-content: center;
-                            transform: translateX(0%);
-                            >div{
-                                width: min(100px, 95%);
-                            }
+                            display: none;
                         }
                         >:nth-child(3){
                             display: flex;
@@ -1160,7 +1177,6 @@ main{
         }
     }
 }
-
 
 // Main ---
 

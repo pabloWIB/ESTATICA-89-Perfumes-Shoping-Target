@@ -3,11 +3,9 @@
 }
 
 header {
-  transition: 10s;
   display: flex;
   width: 100%;
   flex-flow: column wrap;
-  background: url("../IMG/photo.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   gap: 5rem;
@@ -163,6 +161,9 @@ header > :nth-child(2) .whatsAppCallActions a p {
   100% {
     transform: scale(1);
   }
+}
+.headerAnimation {
+  background: url("../IMG/photo.jpg");
 }
 .headerAnimation > :nth-child(1) {
   transform: translateY(0%);
@@ -825,15 +826,7 @@ main .whatsAppCallActions a p {
     font-size: 20px;
   }
   main .carousel .carousel-item .container .dos > :nth-child(2) {
-    display: flex;
-    flex-flow: row wrap;
-    align-items: center;
-    gap: 1rem;
-    justify-content: center;
-    transform: translateX(0%);
-  }
-  main .carousel .carousel-item .container .dos > :nth-child(2) > div {
-    width: min(100px, 95%);
+    display: none;
   }
   main .carousel .carousel-item .container .dos > :nth-child(3) {
     display: flex;
@@ -859,6 +852,40 @@ main .whatsAppCallActions a p {
   main .carousel .carousel-item .container .dos > :nth-child(4) p {
     all: unset;
     font-size: 16px;
+  }
+  main .whatsAppCallActions {
+    display: flex;
+    place-content: center;
+    align-items: center;
+  }
+  main .whatsAppCallActions a {
+    all: unset;
+    cursor: pointer;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    background: #40C351;
+    border-radius: 20px;
+    padding: 0.25rem 0.5rem;
+    gap: 0.5rem;
+    box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.5);
+    animation: scaleUpDown 5s linear infinite;
+  }
+  main .whatsAppCallActions a:hover {
+    transform: scale(1.05);
+    transition: 0.5s;
+  }
+  main .whatsAppCallActions a > :nth-child(1) {
+    width: min(35px, 100%);
+  }
+  main .whatsAppCallActions a > :nth-child(1) img {
+    width: 100%;
+  }
+  main .whatsAppCallActions a p {
+    all: unset;
+    color: white;
+    font-weight: 600;
+    font-size: 20px;
   }
 }
 .carrusel2 {
@@ -1070,15 +1097,7 @@ main .whatsAppCallActions a p {
     font-size: 20px;
   }
   .carrusel2 .carousel .carousel-item .container .dos > :nth-child(2) {
-    display: flex;
-    flex-flow: row wrap;
-    align-items: center;
-    gap: 1rem;
-    justify-content: center;
-    transform: translateX(0%);
-  }
-  .carrusel2 .carousel .carousel-item .container .dos > :nth-child(2) > div {
-    width: min(100px, 95%);
+    display: none;
   }
   .carrusel2 .carousel .carousel-item .container .dos > :nth-child(3) {
     display: flex;
